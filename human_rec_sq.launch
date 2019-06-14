@@ -1,0 +1,22 @@
+<launch>
+
+  <arg name="velodyne_height" default="1.1"/>
+  <arg name="_leafsize" default="0.06" />
+  <arg name="_tolerance" default="0.15" />
+  <arg name="_min_cluster_size" default="20" />
+  <arg name="_max_cluster_size" default="900" />
+
+  <param name="leafsize" value="$(arg _leafsize)" />
+  <param name="tolerance" value="$(arg _tolerance)" />
+  <param name="min_cluster_size" value="$(arg _min_cluster_size)" />
+  <param name="max_cluster_size" value="$(arg _max_cluster_size)" />
+
+  <include file="$(find human_detection)/launch/human_pos_publisher.launch">
+    <arg name="height" value="$(arg velodyne_height)"/>
+  </include>
+
+  <include file="$(find kf_tracking)/launch/human_tracking.launch"/>
+
+  <include file="$(find velodyne_height_map)/launch/rm_ground.launch"/>
+
+</launch>
