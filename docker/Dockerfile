@@ -43,3 +43,7 @@ RUN source /opt/ros/melodic/setup.bash && catkin_make
 ENV ROS_PACKAGE_PATH=/root/catkin_ws:/root/AMSL_ros_pkg:/opt/ros/melodic/share:$ROS_PACKAGE_PATH
 
 WORKDIR /root
+
+COPY ./ros_entrypoint.sh /
+
+CMD ["/ros_entrypoint.sh"]
