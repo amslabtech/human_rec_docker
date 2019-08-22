@@ -1,1 +1,6 @@
 *.tar
+kf_tracking
+human_detection
+mmath
+euclidean_cluster
+visualization_tools

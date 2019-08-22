@@ -1,0 +1,21 @@
+repositories:
+    matchey/visualization_tools:
+        type: git
+        url: https://github.com/matchey/visualization_tools.git
+        version: master
+    matchey/mmath:
+        type: git
+        url: https://github.com/matchey/mmath.git
+        version: master
+    taka-kazu/kf_tracking:
+        type: git
+        url: https://github.com/taka-kazu/kf_tracking.git
+        version: master
+    taka-kazu/human_detection:
+        type: git
+        url: https://github.com/taka-kazu/human_detection.git
+        version: master
+    taka-kazu/euclidean_cluster:
+        type: git
+        url: https://github.com/taka-kazu/euclidean_cluster.git
+        version: test

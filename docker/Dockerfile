@@ -27,20 +27,11 @@ ENV ROS_PACKAGE_PATH=/root/catkin_ws:$ROS_PACKAGE_PATH
 
 ENV ROS_WORKSPACE=/root/catkin_ws
 
-WORKDIR /root/catkin_ws/src
-
-RUN git clone https://github.com/matchey/visualization_tools --depth=1
-RUN git clone https://github.com/matchey/mmath --depth=1
-RUN git clone https://github.com/taka-kazu/kf_tracking --depth=1
-RUN git clone https://github.com/matchey/human_detection --depth=1
-RUN git clone https://github.com/matchey/velodyne_height_map --depth=1
-RUN git clone -b test https://github.com/taka-kazu/euclidean_cluster --depth=1
-
 WORKDIR /root/catkin_ws
 
 RUN source /opt/ros/melodic/setup.bash && catkin_make
 
-ENV ROS_PACKAGE_PATH=/root/catkin_ws:/root/AMSL_ros_pkg:/opt/ros/melodic/share:$ROS_PACKAGE_PATH
+ENV ROS_PACKAGE_PATH=/root/catkin_ws:/opt/ros/melodic/share:$ROS_PACKAGE_PATH
 
 WORKDIR /root
 
