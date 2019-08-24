@@ -1,0 +1,5 @@
+version: '2'
+services:
+    master:
+        build: ./docker
+        container_name: master
